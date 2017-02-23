@@ -1,0 +1,24 @@
+{% extends 'Layouts/master.twig' %}
+
+{% block body %}
+
+{% include 'Front/message.twig' %}
+
+{% for setting in data %}
+	<article>
+		<label name="name">{{ setting.title }}</label>
+
+		{% if setting.content != NULL %}
+			<input type="text" value="{{ setting.content }}">
+		{% endif %}
+
+		{% if setting.nb != NULL %}
+			<input type="range" name="rangeInput_{{ setting.title }}" min="0" max="100" value="{{ setting.nb }}" onchange="updateTextInput(this.value);">
+			<input type="text" id="textInput_{{ setting.title }}" value="{{ setting.nb }}">
+		{% endif %}
+
+	</article>
+{% endfor %}
+
+{% endblock %}
+                     

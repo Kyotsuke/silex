@@ -1,0 +1,16 @@
+{
+    "name": "kyotsuke/project_silex",
+    "description": "Silex",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kyotsuke",
+            "email": "mattieu.vendeville@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "silex/silex": "^2.0",
+        "twig/twig": "^2.1"
+    }
+}
